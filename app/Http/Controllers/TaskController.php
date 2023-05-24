@@ -11,6 +11,7 @@ class TaskController extends Controller
     {
         try {
             $tasks = Task::all();
+            // dd($tasks);
             return view('tasks.index', compact('tasks'));
         } catch (\Exception $e) {
             return response()->json(['error' => 'An error occurred while retrieving tasks.']);
